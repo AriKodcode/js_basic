@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js_web_basic</title>
+    <style>
+      #displayBox {
+        color: aquamarine;
+        background-color: brown;
+        width: 100vw;
+        height: 30vh;
+        font-size: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="displayBox">
+      <input
+        id="userColor"
+        type="text"
+        name="userColor"
+        placeholder="הכנס צבע"
+      />
+      <!-- <button id="idbutton">לחץ עלי!</button> -->
+    </div>
+    <script>
+      const box = document.getElementById('displayBox');
+      const input = document.getElementById('userColor');
+      const boxButton = document.getElementById('idbutton');
+      input.addEventListener('input', () => {
+        box.style.backgroundColor = input.value;
+      });
+    </script>
+  </body>
+</html>
